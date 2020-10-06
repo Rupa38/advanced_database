@@ -1,0 +1,441 @@
+$ ls
+README.txt  downloads  exampleblog  examples  projects  projects.old  sites
+$ ls projects
+exampleblog
+$ ls -la
+total 184
+drwxrwxr-x  18 drdelozier registered_users  4096 Oct 24  2019 .
+drwxr-xr-x   1          0                0  4096 Sep 22 04:52 ..
+-rw-------   1 drdelozier registered_users  5349 Feb 12  2020 .bash_history
+-rwxr-xr-x   1 drdelozier registered_users   271 Feb  5  2018 .bashrc
+-rwxr-xr-x   1 drdelozier registered_users   672 Feb 18  2016 .bashrc.backup
+drwxrwxr-x   3 drdelozier registered_users  4096 Dec  2  2015 .cache
+drwx------   3 drdelozier registered_users  4096 Jul  9  2019 .config
+-rw-rw-r--   1 drdelozier registered_users    88 Nov 29  2016 .dbshell
+-rw-rw-r--   1 drdelozier registered_users   354 Sep 20  2016 .gitconfig
+-rw-r--r--   1 drdelozier registered_users 12288 Oct  3  2016 .hello.py.swp
+drwxr-xr-x   2 drdelozier registered_users  4096 Dec  1  2015 .ipynb_checkpoints
+drwxr-xr-x   5 drdelozier registered_users  4096 Dec  1  2015 .ipython
+drwx------   4 drdelozier registered_users  4096 May 16  2015 .local
+-rw-------   1 drdelozier registered_users     0 Nov 29  2016 .mongorc.js
+drwx------   2 drdelozier registered_users  4096 Jan 25  2019 .ne
+drwx------   2 drdelozier registered_users  4096 Jul  9  2019 .ngrok2
+drwxrwxr-x 363 drdelozier registered_users 12288 Jul  9  2019 .npm
+-rw-r--r--   1 drdelozier registered_users   105 Feb  5  2018 .profile
+-rw-------   1 drdelozier registered_users  2685 Oct 24  2019 .python_history
+
+-rwxr-xr-x   1 drdelozier registered_users    77 Feb  9  2015 .pythonstartup.py
+-rw-------   1 drdelozier registered_users   394 Oct  4  2017 .sqlite_history
+drwx------   2 drdelozier registered_users  4096 Feb 18  2016 .ssh
+-rw-------   1 drdelozier registered_users 25444 Oct  1  2019 .viminfo
+-rwxr-xr-x   1 drdelozier registered_users   229 Oct  3  2016 .vimrc
+-rwxr-xr-x   1 drdelozier registered_users  4517 Oct  3  2016 .vimrc.old
+drwxrwxr-x   3 drdelozier registered_users  4096 May 16  2015 .virtualenvs
+-rw-rw-r--   1 drdelozier registered_users   171 Jul 10  2019 .wget-hsts
+-rwxr-xr-x   1 drdelozier registered_users   232 Feb  6  2019 README.txt
+drwxrwxr-x   2 drdelozier registered_users  4096 Feb  6  2019 downloads
+drwxrwxr-x   8 drdelozier registered_users  4096 Oct 24  2019 exampleblog
+drwxrwxr-x   2 drdelozier registered_users  4096 Sep 19  2019 examples
+drwxrwxr-x   3 drdelozier registered_users  4096 Sep 17  2019 projects
+drwxrwxr-x   8 drdelozier registered_users  4096 Sep 16  2019 projects.old
+drwxrwxr-x   3 drdelozier registered_users  4096 Aug 29  2019 sites
+$ cd .ssh
+$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts
+$ cd ~
+$ mkdir .ssh
+mkdir: cannot create directory ‘.ssh’: File exists
+$ cd .ssh
+$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/drdelozier/.ssh/id_rsa): /home/drdelozier/.ssh/id_rsa2
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/drdelozier/.ssh/id_rsa2.
+Your public key has been saved in /home/drdelozier/.ssh/id_rsa2.pub.
+The key fingerprint is:
+SHA256:bkz4625WZ42MIWTaZnXuE99d1/qxCFNxdRR+XWkXHWE drdelozier@green-liveconsole6
+The key's randomart image is:
++---[RSA 2048]----+
+|               E&|
+|        o . ..o+*|
+|       = . o  +.=|
+|      ..= . o.  =|
+|      .oS. =.= o+|
+|       =  ooB +.o|
+|        =. oo...o|
+|       .o.   . ..|
+|       =+        |
++----[SHA256]-----+
+$ ls
+authorized_keys  id_rsa  id_rsa.pub  id_rsa2  id_rsa2.pub  known_hosts
+$ cat id_rsa2.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC10VSx5omtwKHm4xRyacasmQb2rmKAsagvd/k4vb8WQXI6c0Nr2tLFgR6WA7Eyj2aMuOXlkf4Zr8e4SFpx9ld1iQe7AFx0xEYrTca+3//fbJQm4byAK0WmhtkpZGYG7I8RWYrpozFsOgDT6dEq7UfORVU1M0qfZiu3lNyVPuta2loi/gmQxkXOK+Q8oUrwpVXvAklALyaUj/Wswy6USOivjMaahF2II+OVB3URiXwTQgaqimFkDPKryM4x+ttakv6N7KQqGG4ybk2CI3uqTgJp56ISMmpnQxFxwBISavvLRjq3vyMrPaj6n1fZHAe+v1/tK5RZ8+X5dZTTsozg4qBv drdelozier@green-liveconsole6
+$ cat id_rsa2.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC10VSx5omtwKHm4xRyacasmQb2rmKAsagvd/k4vb8WQXI6c0Nr2tLFgR6WA7Eyj2aMuOXlkf4Zr8e4SFpx9ld1iQe7AFx0xEYrTca+3//fbJQm4byAK0WmhtkpZGYG7I8RWYrpozFsOgDT6dEq7UfORVU1M0qfZiu3lNyVPuta2loi/gmQxkXOK+Q8oUrwpVXvAklALyaUj/Wswy6USOivjMaahF2II+OVB3URiXwTQgaqimFkDPKryM4x+ttakv6N7KQqGG4ybk2CI3uqTgJp56ISMmpnQxFxwBISavvLRjq3vyMrPaj6n1fZHAe+v1/tK5RZ8+X5dZTTsozg4qBv drdelozier@green-liveconsole6
+$ cat id_rsa2.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC10VSx5omtwKHm4xRyacasmQb2rmKAsagvd/k4vb8WQXI6c0Nr2tLFgR6WA7Eyj2aMuOXlkf4Zr8e4SFpx9ld1iQe7AFx0xEYrTca+3//fbJQm4byAK0WmhtkpZGYG7I8RWYrpozFsOgDT6dEq7UfORVU1M0qfZiu3lNyVPuta2loi/gmQxkXOK+Q8oUrwpVXvAklALyaUj/Wswy6USOivjMaahF2II+OVB3URiXwTQgaqimFkDPKryM4x+ttakv6N7KQqGG4ybk2CI3uqTgJp56ISMmpnQxFxwBISavvLRjq3vyMrPaj6n1fZHAe+v1/tK5RZ8+X5dZTTsozg4qBv drdelozier@green-liveconsole6
+$ cd projects
+bash: cd: projects: No such file or directory
+$ cd ~/projects
+$ ls
+exampleblog
+$ git clone git@github.com:drdelozier/advanced_database.git
+Cloning into 'advanced_database'...
+Warning: Permanently added the RSA host key for IP address '140.82.112.3' to the list of known hosts.
+remote: Enumerating objects: 45, done.
+remote: Counting objects: 100% (45/45), done.
+remote: Compressing objects: 100% (30/30), done.
+Receiving objects: 100% (45/45), 7.91 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (19/19), done.
+remote: Total 45 (delta 19), reused 36 (delta 13), pack-reused 0
+Checking connectivity... done.
+$ ls
+advanced_database  exampleblog
+$ ls
+advanced_database  exampleblog  www-data
+$ cd www-data
+$ ls
+__pycache__  bottle_app.py
+$ ls -la
+total 16
+drwxrwxr-x 3 drdelozier registered_users 4096 Sep 23 23:48 .
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:48 ..
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:48 __pycache__
+-rw-rw-r-- 1 drdelozier registered_users  203 Sep 23 23:48 bottle_app.py
+$ cd ..
+$ ls
+advanced_database  exampleblog  www-data
+$ cd advanced_database
+$ ls -la
+total 32
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 23 23:44 .
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:48 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 23 23:44 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 23 23:44 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 23 23:44 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 bottle_1
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 production
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 sandbox
+$ cd production
+$ ls
+bottle_app.py  create_todo_db.py  new_item.tpl  show_list.tpl  todo.db
+$ cp * ..
+$ cd ..
+$ ls
+README.md  bottle_app.py      new_item.tpl  sandbox        todo.db
+bottle_1   create_todo_db.py  production    show_list.tpl
+$ rm -r production
+$ ls
+README.md  bottle_1  bottle_app.py  create_todo_db.py  new_item.tpl  sandbox  show_list.tpl  todo.db
+$ ls
+README.md  bottle_1  bottle_app.py  create_todo_db.py  new_item.tpl  sandbox  show_list.tpl  todo.db
+$ git add --all
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        renamed:    production/bottle_app.py -> bottle_app.py
+        renamed:    production/create_todo_db.py -> create_todo_db.py
+        renamed:    production/new_item.tpl -> new_item.tpl
+        renamed:    production/show_list.tpl -> show_list.tpl
+        renamed:    production/todo.db -> todo.db
+
+$ git commit -m "put application in root of repo"
+[master e42c0d5] put application in root of repo
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ rename production/bottle_app.py => bottle_app.py (100%)
+ rename production/create_todo_db.py => create_todo_db.py (100%)
+ rename production/new_item.tpl => new_item.tpl (100%)
+ rename production/show_list.tpl => show_list.tpl (100%)
+ rename production/todo.db => todo.db (100%)
+$ git push
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 528 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To git@github.com:drdelozier/advanced_database.git
+   08ce21b..e42c0d5  master -> master
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+$ ls
+README.md  bottle_1  bottle_app.py  create_todo_db.py  new_item.tpl  sandbox  show_list.tpl  todo.db
+$ tree
+.
+├── README.md
+├── bottle_1
+│   ├── bottle_app.py
+│   ├── create_todo_db.py
+│   ├── hello_web.py
+│   ├── list_todos.py
+│   ├── new_item.tpl
+│   ├── show_list.tpl
+│   ├── todo.db
+│   └── todo_web.py
+├── bottle_app.py
+├── create_todo_db.py
+├── new_item.tpl
+├── sandbox
+│   ├── animals.db
+│   └── list_animals.py
+├── show_list.tpl
+└── todo.db
+
+2 directories, 16 files
+$ ls -la
+total 52
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:51 .
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:48 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 23 23:52 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 23 23:44 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 23 23:44 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 23 23:50 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 23 23:50 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 23 23:50 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 23 23:50 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 23 23:50 todo.db
+$ 
+$ 
+$ ls-l
+bash: ls-l: command not found
+$ ls -l
+total 36
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 23 23:44 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 23 23:50 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 23 23:50 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 23 23:50 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:44 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 23 23:50 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 23 23:50 todo.db
+$ cd ..
+$ ls
+advanced_database  exampleblog  www-data
+$ cp -r adv*/* www-data
+$ ls www-data
+README.md    bottle_1       create_todo_db.py  sandbox        todo.db
+__pycache__  bottle_app.py  new_item.tpl       show_list.tpl
+$ cd www-data
+$ ls
+README.md    bottle_1       create_todo_db.py  sandbox        todo.db
+__pycache__  bottle_app.py  new_item.tpl       show_list.tpl
+$ git status
+fatal: Not a git repository (or any parent up to mount point /home/drdelozier)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+$ pwd
+/home/drdelozier/projects/www-data
+$ ls -la
+total 48
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:54 .
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:48 ..
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 23 23:54 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:48 __pycache__
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:54 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 23 23:54 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 23 23:54 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 23 23:54 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:54 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 23 23:54 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 23 23:54 todo.db
+$ cp ../adva*/.git* .
+cp: omitting directory '../advanced_database/.git'
+$ cp -r ../adva*/.git* .
+$ ls
+README.md    bottle_1       create_todo_db.py  sandbox        todo.db
+__pycache__  bottle_app.py  new_item.tpl       show_list.tpl
+$ ls -la
+total 56
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 23 23:55 .
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:48 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 23 23:55 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 23 23:55 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 23 23:54 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:48 __pycache__
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:54 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 23 23:54 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 23 23:54 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 23 23:54 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:54 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 23 23:54 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 23 23:54 todo.db
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+$ ls -la
+total 56
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 23 23:58 .
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 23 23:48 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 23 23:55 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 23 23:55 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 23 23:54 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:58 __pycache__
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:54 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users  203 Sep 23 23:58 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 23 23:54 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 23 23:54 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 23 23:54 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 23 23:54 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 23 23:54 todo.db
+$ cat bottle_app.py
+
+# A very simple Bottle Hello World app for you to get started with...
+from bottle import default_app, route
+
+@route('/')
+def hello_world():
+    return 'Hello from Bottle!'
+
+application = default_app()
+
+$ cp ../adv*/bottle_app.py
+cp: missing destination file operand after '../advanced_database/bottle_app.py'
+Try 'cp --help' for more information.
+$ cp ../adv*/bottle_app.py .
+$ ls
+README.md    bottle_1       create_todo_db.py  sandbox        todo.db
+__pycache__  bottle_app.py  new_item.tpl       show_list.tpl
+$ cd ..
+$ ls
+advanced_database  dev-data  exampleblog  www-data
+$ cd ..
+$ ls
+README.txt  downloads  exampleblog  examples  projects  projects.old  sites
+$ cd projects
+$ cd dev_data
+bash: cd: dev_data: No such file or directory
+$ ls
+advanced_database  dev-data  exampleblog  www-data
+$ cd dev-data
+$ cp -r ../adv*/* .
+$ ls
+README.md    bottle_1       create_todo_db.py  sandbox        todo.db
+__pycache__  bottle_app.py  new_item.tpl       show_list.tpl
+$ ls -la
+total 48
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 24 00:02 .
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 24 00:01 ..
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 24 00:02 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:01 __pycache__
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:02 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 24 00:02 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 24 00:02 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 24 00:02 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:02 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 24 00:02 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 24 00:02 todo.db
+$ cp -r ../adv*/.git* .
+$ ls -la
+total 56
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 24 00:03 .
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 24 00:01 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 24 00:03 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 24 00:03 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 24 00:02 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:01 __pycache__
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:02 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 24 00:02 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 24 00:02 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 24 00:02 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:02 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 24 00:02 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 24 00:02 todo.db
+$ ls -la
+total 56
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 24 00:03 .
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 24 00:01 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 24 00:03 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 24 00:03 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   71 Sep 24 00:02 README.md
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:01 __pycache__
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:02 bottle_1
+-rw-rw-r-- 1 drdelozier registered_users 1718 Sep 24 00:02 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 24 00:02 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  181 Sep 24 00:02 new_item.tpl
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 00:02 sandbox
+-rw-rw-r-- 1 drdelozier registered_users  278 Sep 24 00:02 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 24 00:02 todo.db
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+$ cd ..
+$ ls
+advanced_database  dev-data  exampleblog  www-data
+$ git status
+fatal: Not a git repository (or any parent up to mount point /home/drdelozier)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+$ cd dev*
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   show_list.tpl
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git add --all
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   show_list.tpl
+
+$ git commit -m "added Experimental Label"
+[master 7096cf8] added Experimental Label
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@github.com:drdelozier/advanced_database.git
+   e42c0d5..7096cf8  master -> master
+$ cd ..
+$ cd www*
+$ ls
+README.md    bottle_1       create_todo_db.py  sandbox        todo.db
+__pycache__  bottle_app.py  new_item.tpl       show_list.tpl
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:drdelozier/advanced_database
+   e42c0d5..7096cf8  master     -> origin/master
+Updating e42c0d5..7096cf8
+Fast-forward
+ show_list.tpl | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+$ cd ..
+$ ls
+advanced_database  dev-data  exampleblog  www-data
+$ rm -r ex*
+rm: remove write-protected regular file 'exampleblog/.git/objects/3c/32c5e4b2a433d1d19c9ab2ec9bde1ab287b562'? ^C
+$ rm -rf ex*
+$ 
